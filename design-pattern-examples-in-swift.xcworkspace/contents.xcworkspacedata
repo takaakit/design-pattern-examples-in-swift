@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "BehavioralPatterns">
+      <FileRef
+         location = "group:BehavioralPatterns/ChainOfResponsibility/ChainOfResponsibility.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Command/Command.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Interpreter/Interpreter.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Iterator/Iterator.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Mediator/Mediator.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Memento/Memento.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Observer/Observer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/State/State.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Strategy/Strategy.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/TemplateMethod/TemplateMethod.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:BehavioralPatterns/Visitor/Visitor.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "CreationalPatterns">
+      <FileRef
+         location = "group:CreationalPatterns/AbstractFactory/AbstractFactory.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CreationalPatterns/Builder/Builder.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CreationalPatterns/FactoryMethod/FactoryMethod.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CreationalPatterns/Prototype/Prototype.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CreationalPatterns/Singleton/Singleton.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "StructuralPatterns">
+      <FileRef
+         location = "group:StructuralPatterns/Adapter/Adapter.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:StructuralPatterns/Bridge/Bridge.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:StructuralPatterns/Composite/Composite.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:StructuralPatterns/Decorator/Decorator.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:StructuralPatterns/Facade/Facade.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:StructuralPatterns/Flyweight/Flyweight.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:StructuralPatterns/Proxy/Proxy.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
