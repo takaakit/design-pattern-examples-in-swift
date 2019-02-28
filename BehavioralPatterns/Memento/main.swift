@@ -13,7 +13,7 @@ var memento = gamer.createMemento()         // Save the initial state
 
 for i in 0..<100 {
     print("==== \(i)")                      // Display count
-    print("Current state: \(gamer)")        // Display the current state of the gamer
+    print("Current state: \(gamer.toString())")     // Display the current state of the gamer
 
     gamer.play()                            // Play a game
 

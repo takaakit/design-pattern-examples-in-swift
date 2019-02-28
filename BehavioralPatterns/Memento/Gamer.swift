@@ -101,8 +101,9 @@ public class Gamer {
         }
         // In case of 6...Gamer gets desserts
         else if dice == 6 {
-            print("Gamer gets desserts(\(dessert))")
-            desserts.append(dessert)
+            let acquiredDessert: String = dessert
+            print("Gamer gets desserts(\(acquiredDessert))")
+            desserts.append(acquiredDessert)
         }
         // Other...Nothing happens
         else {
