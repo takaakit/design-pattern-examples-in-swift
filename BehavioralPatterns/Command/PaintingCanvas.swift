@@ -18,15 +18,8 @@ public class PaintingCanvas: NSImageView, PaintingTarget {
     
     // ˄
 
-    // Painting history
-    private var history: HistoryCommand = HistoryCommand()
-    // ˅
-    
-    // ˄
-
     public required init?(coder: NSCoder) {
         // ˅
-        history = HistoryCommand()
         super.init(coder: coder)
         // ˄
     }
