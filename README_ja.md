@@ -53,8 +53,7 @@ public class File: FileSystemElement {
 インストール
 ------------
 **Astah**
-* [チェンジビジョンのサイト](http://astah.change-vision.com/ja/download.html)から Astah の Community or UML or Professional をダウンロードしインストールしてください。  
-  Community は無償、UML と Professional は有償です。  
+* [チェンジビジョンのサイト](http://astah.change-vision.com/ja/download.html)から Astah の UML or Professional をダウンロードしインストールしてください。  
 
 **M PLUS プラグイン**
 * [M PLUS プラグインのサイト](https://sites.google.com/view/m-plus-plugin/download)からプラグインをダウンロードしインストールしてください。  
@@ -83,7 +82,9 @@ public class File: FileSystemElement {
 --------------------------
 
 * [Design Pattern Examples in C++](https://github.com/takaakit/design-pattern-examples-in-cpp)
+* [Design Pattern Examples in C#](https://github.com/takaakit/design-pattern-examples-in-csharp)
 * [Design Pattern Examples in Golang](https://github.com/takaakit/design-pattern-examples-in-golang)
+* [Design Pattern Examples in Java](https://github.com/takaakit/design-pattern-examples-in-java)
 * [Design Pattern Examples in Kotlin](https://github.com/takaakit/design-pattern-examples-in-kotlin)
 * [Design Pattern Examples in Python](https://github.com/takaakit/design-pattern-examples-in-python)
 * [Design Pattern Examples in Ruby](https://github.com/takaakit/design-pattern-examples-in-ruby)
