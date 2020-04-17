@@ -28,7 +28,7 @@ public class TextDisplayImpl: DisplayImpl {
 
     public func implWrite() {
         // ˅
-        print(":" + text + ":")             // Enclose a text with "|" and display it.
+        print(":" + text + ":")             // Enclose a text with ":" and display it.
         // ˄
     }
 
