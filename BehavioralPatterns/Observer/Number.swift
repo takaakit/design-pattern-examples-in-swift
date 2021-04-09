@@ -2,7 +2,7 @@
 
 // ˄
 
-// An abstract class that generates numbers.
+// Provides an interface for attaching and detaching Observer objects.
 public class Number {
     // ˅
 
