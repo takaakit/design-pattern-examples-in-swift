@@ -16,7 +16,7 @@ public class UnderlineDisplay: Display {
         // ˄
     }
 
-    public func createClone() throws -> Display {
+    public func clone() -> Display {
         // ˅
         return UnderlineDisplay(underlineChar: self.underlineChar)
         // ˄
@@ -25,7 +25,7 @@ public class UnderlineDisplay: Display {
     public func show(message: String) {
         // ˅
         let length = message.count
-        print("\"" + message + "\"")
+        print("\"\(message)\"")
         print(" ", terminator: "")
         for _ in 0..<length {
             print(underlineChar, terminator: "")

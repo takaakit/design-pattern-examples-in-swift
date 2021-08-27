@@ -6,14 +6,13 @@ Design Pattern Examples in Swift
 Model and code examples of GoF Design Patterns for Swift.  
 This project is available for the following objectives:  
 
-* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
+* To understand GoF Design Pattern examples in Swift.
 * To understand the mapping between UML model and Swift code.
-* To understand GoF Design Pattern examples in Swift.  
-  etc.
+* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
 
 > UML model example:
 
-![](screenshots/CompositePattern.png "Composite Pattern")
+![](screenshots/CompositePattern.svg "Composite Pattern")
 
 > Swift code example:
 
@@ -27,16 +26,35 @@ public class File: FileSystemElement {
     
     // ˄
 
-    public override init(name: String, size: Int) {
+    private let name: String
+
+    private let size: Int
+
+    public init(name: String, size: Int) {
         // ˅
-        super.init(name: name, size: size)
+        self.name = name
+        self.size = size
+        // ˄
+    }
+
+    // File name
+    public override func getName() -> String {
+        // ˅
+        return name
+        // ˄
+    }
+
+    // File size
+    public override func getSize() -> Int {
+        // ˅
+        return size
         // ˄
     }
 
     // Print this element with the "upperPath".
     public override func print(upperPath: String) {
         // ˅
-        Swift.print(upperPath + "/" + toString())
+        Swift.print("\(upperPath)/\(self.toString())")
         // ˄
     }
 

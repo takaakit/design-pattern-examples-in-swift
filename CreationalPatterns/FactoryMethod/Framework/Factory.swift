@@ -8,23 +8,21 @@ public class Factory {
     
     // ˄
 
-    public func create(owner: String) throws -> Product {
+    public func create(owner: String) -> Product {
         // ˅
-        let product = try createProduct(owner: owner)
-        try registerProduct(product: product)
+        // Write pre-creation code here, if any.
+
+        let product = createProduct(owner: owner)
+
+        // Write post-creation code here, if any.
+        
         return product
         // ˄
     }
 
-    public func createProduct(owner: String) throws -> Product {
+    public func createProduct(owner: String) -> Product {
         // ˅
-        throw NSError(domain: "error", code: -1, userInfo: nil)
-        // ˄
-    }
-
-    public func registerProduct(product: Product) throws {
-        // ˅
-        throw NSError(domain: "error", code: -1, userInfo: nil)
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 

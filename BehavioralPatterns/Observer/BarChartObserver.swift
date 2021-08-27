@@ -2,19 +2,29 @@
 
 // ˄
 
-// Display values with a bar chart.
+// Display values as a bar chart.
 public class BarChartObserver: Observer {
     // ˅
 
     // ˄
 
-    public func update(number: Number) {
+    private let numberSubject: NumberSubject
+
+    public init(numberSubject: NumberSubject) {
         // ˅
-        print("Bar chart: ", terminator: "")
-        for _ in 0..<number.value {
-            print("*", terminator: "")
+        self.numberSubject = numberSubject
+        // ˄
+    }
+
+    public func update(changedSubject: Subject) {
+        // ˅
+        if changedSubject === self.numberSubject {
+            print("Bar chart: ", terminator: "")
+            for _ in 0..<self.numberSubject.getValue() {
+                print("*", terminator: "")
+            }
+            print()
         }
-        print()
         // ˄
     }
 

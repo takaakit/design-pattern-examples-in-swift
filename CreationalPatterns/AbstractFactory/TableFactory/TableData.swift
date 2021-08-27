@@ -17,7 +17,7 @@ public class TableData: Data {
         // ˅
         var buffer: String = ""
         buffer.append("<td><table width=\"100%\" border=\"2\">\n")
-        buffer.append("<tr><td bgcolor=\"#00CC00\" align=\"center\" colspan=\"" + String(items.count) + "\"><b>" + name + "</b></td></tr>\n")
+        buffer.append("<tr><td bgcolor=\"#00CC00\" align=\"center\" colspan=\"\(String(items.count))\"><b>\(name)</b></td></tr>\n")
         buffer.append("<tr>\n")
         for item in items {
             buffer.append(item.toHTML())

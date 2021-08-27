@@ -17,7 +17,7 @@ public class LimitedSupporter: Supporter {
     }
 
     // Troubles with an ID below the limit are handled.
-    public override func handle(trouble: Trouble) -> Bool {
+    public override func canHandle(trouble: Trouble) -> Bool {
         // ˅
         return trouble.id <= limitId
         // ˄

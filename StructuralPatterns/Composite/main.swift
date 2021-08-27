@@ -1,33 +1,32 @@
 import Foundation
 
-// Represents a file system composed of files and directories.
+/*
+Represents a file system composed of files and directories. FileSystemElement makes
+it possible to treat File and Directory uniformly.
+*/
 
 print("Create a file system...")
-let rootDir: Directory = Directory(name: "root")
-let homeDir: Directory = Directory(name: "home")
+
 let binDir: Directory = Directory(name: "bin")
-let etcDir: Directory = Directory(name: "etc")
+let lsFile: File = File(name: "ls", size: 20)
+binDir.add(element: lsFile)
+let mkdirFile: File = File(name: "mkdir", size: 40)
+binDir.add(element: mkdirFile)
+
 let emilyDir: Directory = Directory(name: "emily")
+let homeworkFile: File = File(name: "homework.doc", size: 60)
+emilyDir.add(element: homeworkFile)
+
 let jamesDir: Directory = Directory(name: "james")
-let oliviaDir: Directory = Directory(name: "olivia")
+let appFile: File = File(name: "app.exe", size: 80)
+jamesDir.add(element: appFile)
 
-rootDir.add(element: homeDir)
-rootDir.add(element: binDir)
-rootDir.add(element: etcDir)
-
-binDir.add(element: File(name: "ls", size: 100))
-binDir.add(element: File(name: "mkdir", size: 50))
+let homeDir: Directory = Directory(name: "home")
 homeDir.add(element: emilyDir)
 homeDir.add(element: jamesDir)
-homeDir.add(element: oliviaDir)
 
-emilyDir.add(element: File(name: "homework.doc", size: 40))
-jamesDir.add(element: File(name: "homework.doc", size: 50))
-jamesDir.add(element: File(name: "app.exe", size: 60))
-oliviaDir.add(element: File(name: "homework.doc", size: 70))
-oliviaDir.add(element: File(name: "app.exe", size: 80))
-oliviaDir.add(element: File(name: "tips.html", size: 90))
+let rootDir: Directory = Directory(name: "root")
+rootDir.add(element: homeDir)
+rootDir.add(element: binDir)
 
 rootDir.print(upperPath: "")
-
-exit(0)

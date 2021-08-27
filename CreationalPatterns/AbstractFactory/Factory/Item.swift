@@ -18,8 +18,7 @@ public class Item {
 
     public func toHTML() -> String {
         // ˅
-        print("Item.toHTML() must be overriden.")
-        exit(1)
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 

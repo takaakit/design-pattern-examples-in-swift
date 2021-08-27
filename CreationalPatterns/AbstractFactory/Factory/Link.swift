@@ -7,10 +7,7 @@ public class Link: Item {
     
     // ˄
 
-    public var url: String
-    // ˅
-    
-    // ˄
+    public let url: String
 
     public init(name: String, url: String) {
         // ˅

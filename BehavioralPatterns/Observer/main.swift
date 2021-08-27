@@ -1,12 +1,26 @@
+#if os(Linux)
 import Foundation
+#else
+import Cocoa
+#endif
 
-// Observers observe objects generating a numerical value and display the value.
+/*
+Observers observe a Subject object holding a numerical value and display the value.
+The display formats are digits and bar charts.
+*/
 
-let number = RandomNumber()
-let digitObserver = DigitObserver()
-let barChartObserver = BarChartObserver()
-number.addObserver(observer: digitObserver)
-number.addObserver(observer: barChartObserver)
-number.generate()
+let numberSubject = NumberSubject()
+numberSubject.attach(observer: DigitObserver(numberSubject: numberSubject))
+numberSubject.attach(observer: BarChartObserver(numberSubject: numberSubject))
 
-exit(0)
+srandom(UInt32(time(nil)))
+for _ in 0..<20 {
+    #if os(Linux)
+    let value = Int(random() % 50)
+    #else
+    let value = Int(arc4random()) % 50
+    #endif
+
+    numberSubject.setValue(value: value)
+    Thread.sleep(forTimeInterval: 0.2)
+}

@@ -16,7 +16,7 @@ public class FrameDisplay: Display {
         // ˄
     }
 
-    public func createClone() throws -> Display {
+    public func clone() -> Display {
         // ˅
         return FrameDisplay(borderChar: self.borderChar)
         // ˄
@@ -29,7 +29,7 @@ public class FrameDisplay: Display {
             print(borderChar, terminator: "")
         }
         print()
-        print(String(borderChar) + " " + message + " " + String(borderChar))
+        print("\(String(borderChar)) \(message) \(String(borderChar))")
         for _ in 0..<length+4 {
             print(borderChar, terminator: "")
         }

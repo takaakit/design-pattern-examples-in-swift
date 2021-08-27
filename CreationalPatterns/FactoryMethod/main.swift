@@ -1,16 +1,18 @@
 import Foundation
 
-// Factory to make ID cards.
+/*
+The subject is a factory to make credit cards. The Factory defines how to create an credit card,
+but the actual credit card is created by the CreditCardFactory.
+The "createProduct()" is called a Factory Method, and it is responsible for manufacturing an object.
+*/
 
 let factory = CreditCardFactory()
 
-let jacksonCard = try factory.create(owner: "Jackson")
+let jacksonCard = factory.create(owner: "Jackson")
 jacksonCard.use()
 
-let sophiaCard = try factory.create(owner: "Sophia")
+let sophiaCard = factory.create(owner: "Sophia")
 sophiaCard.use()
 
-let oliviaCard = try factory.create(owner: "Olivia")
+let oliviaCard = factory.create(owner: "Olivia")
 oliviaCard.use()
-
-exit(0)

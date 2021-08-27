@@ -27,7 +27,7 @@ public class ColleagueTextField: NSTextField, Colleague, NSTextFieldDelegate {
         // ˄
     }
 
-    public override func controlTextDidChange(_ obj: Notification) {
+    public func controlTextDidChange(_ obj: Notification) {
         // ˅
         mediator?.colleagueChanged()
         // ˄

@@ -1,33 +1,31 @@
 import Foundation
 
-// Visitors visit a file system composed of files and directories, and displays a list of files/directories.
+/*
+Visitor visits the file system composed of files and directories, and displays a list of files/directories.
+*/
 
 print("Create a file system...")
-var rootDir: Directory = Directory(name: "root")
-var homeDir: Directory = Directory(name: "home")
-var binDir: Directory = Directory(name: "bin")
-var etcDir: Directory = Directory(name: "etc")
-var emilyDir: Directory = Directory(name: "emily")
-var jamesDir: Directory = Directory(name: "james")
-var oliviaDir: Directory = Directory(name: "olivia")
 
-rootDir.add(element: homeDir)
-rootDir.add(element: binDir)
-rootDir.add(element: etcDir)
+let binDir: Directory = Directory(name: "bin")
+let lsFile: File = File(name: "ls", size: 20)
+binDir.add(element: lsFile)
+let mkdirFile: File = File(name: "mkdir", size: 40)
+binDir.add(element: mkdirFile)
 
-binDir.add(element: File(name: "ls", size: 100))
-binDir.add(element: File(name: "mkdir", size: 50))
+let emilyDir: Directory = Directory(name: "emily")
+let homeworkFile: File = File(name: "homework.doc", size: 60)
+emilyDir.add(element: homeworkFile)
+
+let jamesDir: Directory = Directory(name: "james")
+let appFile: File = File(name: "app.exe", size: 80)
+jamesDir.add(element: appFile)
+
+let homeDir: Directory = Directory(name: "home")
 homeDir.add(element: emilyDir)
 homeDir.add(element: jamesDir)
-homeDir.add(element: oliviaDir)
 
-emilyDir.add(element: File(name: "homework.doc", size: 40))
-jamesDir.add(element: File(name: "homework.doc", size: 50))
-jamesDir.add(element: File(name: "app.exe", size: 60))
-oliviaDir.add(element: File(name: "homework.doc", size: 70))
-oliviaDir.add(element: File(name: "app.exe", size: 80))
-oliviaDir.add(element: File(name: "tips.html", size: 90))
+let rootDir: Directory = Directory(name: "root")
+rootDir.add(element: homeDir)
+rootDir.add(element: binDir)
 
 rootDir.accept(visitor: ListVisitor())
-
-exit(0)

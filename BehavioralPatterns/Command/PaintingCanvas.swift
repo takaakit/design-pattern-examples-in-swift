@@ -24,13 +24,13 @@ public class PaintingCanvas: NSImageView, PaintingTarget {
         // ˄
     }
 
-    public func paint(paintingPosX: Double, paintingPosY: Double) {
+    public func paint(x: Double, y: Double) {
         // ˅
         drawingPoint.lineWidth = CGFloat(pointRadius * 2)
-        drawingPoint.lineCapStyle = NSBezierPath.LineCapStyle.roundLineCapStyle
-        drawingPoint.lineJoinStyle = NSBezierPath.LineJoinStyle.roundLineJoinStyle
-        drawingPoint.move(to: CGPoint(x: paintingPosX, y: paintingPosY))
-        drawingPoint.line(to: CGPoint(x: paintingPosX, y: paintingPosY))
+        drawingPoint.lineCapStyle = NSBezierPath.LineCapStyle.round
+        drawingPoint.lineJoinStyle = NSBezierPath.LineJoinStyle.round
+        drawingPoint.move(to: CGPoint(x: x, y: y))
+        drawingPoint.line(to: CGPoint(x: x, y: y))
         needsDisplay = true
         // ˄
     }

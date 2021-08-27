@@ -26,7 +26,7 @@ public class Supporter {
     // Troubles are sent around.
     public func support(trouble: Trouble) {
         // ˅
-        if (handle(trouble: trouble) == true) {
+        if (canHandle(trouble: trouble)) {
             supported(trouble: trouble)
         }
         else if (next != nil) {
@@ -46,22 +46,16 @@ public class Supporter {
         // ˄
     }
 
-    public func toString() -> String {
+    public func canHandle(trouble: Trouble) -> Bool {
         // ˅
-        return "[\(name)]"
-        // ˄
-    }
-
-    public func handle(trouble: Trouble) -> Bool {
-        // ˅
-        return false
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
     // Trouble was supported.
     private func supported(trouble: Trouble) {
         // ˅
-        print("\(trouble.toString()) was handled by \(self.toString()).")
+        print("\(trouble.toString()) was handled by \(name).")
         // ˄
     }
 

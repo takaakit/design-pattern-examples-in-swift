@@ -14,7 +14,7 @@ public class LazySupporter: Supporter {
     }
 
     // No troubles are handled.
-    public override func handle(trouble: Trouble) -> Bool {
+    public override func canHandle(trouble: Trouble) -> Bool {
         // ˅
         return false
         // ˄

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7164E6B32131BEA800B37AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164E6B22131BEA800B37AD2 /* AppDelegate.swift */; };
 		7164E6B52131BEAF00B37AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7164E6B42131BEAF00B37AD2 /* Assets.xcassets */; };
-		7164E6C22131C05000B37AD2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7164E6C12131C05000B37AD2 /* Info.plist */; };
 		7164E6C42131C1CE00B37AD2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7164E6C32131C1CE00B37AD2 /* MainMenu.xib */; };
 		7164E6C92131C20F00B37AD2 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164E6C52131C20F00B37AD2 /* Context.swift */; };
 		7164E6CA2131C20F00B37AD2 /* DaytimeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164E6C62131C20F00B37AD2 /* DaytimeState.swift */; };
@@ -87,11 +86,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = non;
 				TargetAttributes = {
 					7164E6AE2131BEA800B37AD2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -119,7 +119,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7164E6B52131BEAF00B37AD2 /* Assets.xcassets in Resources */,
-				7164E6C22131C05000B37AD2 /* Info.plist in Resources */,
 				7164E6C42131C1CE00B37AD2 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +168,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -229,6 +229,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -261,6 +262,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = State.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
@@ -270,7 +272,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = non.State;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -279,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = State.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
@@ -288,7 +291,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = non.State;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

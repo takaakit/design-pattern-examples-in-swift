@@ -12,7 +12,7 @@ public class Page {
 
     public let author: String
 
-    public var contents: [Item] = []
+    public var contents: [Item]
     // ˅
     
     // ˄
@@ -21,13 +21,13 @@ public class Page {
         // ˅
         self.title = title
         self.author = author
+        self.contents = [Item]()
         // ˄
     }
 
     public func toHTML() -> String {
         // ˅
-        print("Page.toHTML() must be overriden.")
-        exit(1)
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
@@ -39,7 +39,7 @@ public class Page {
 
     public func output() {
         // ˅
-        let fileName = title + ".html"
+        let fileName = "\(title).html"
         do {
             try toHTML().write(toFile: fileName, atomically: true, encoding: String.Encoding.utf8)
         }
@@ -47,7 +47,9 @@ public class Page {
             print("Failed to write")
             exit(1)
         }
-        print(fileName + " has been created.")
+        print("\(fileName) has been created.")
+        let fm = FileManager.default
+        print("Output File: \(fm.currentDirectoryPath)/\(fileName)")
         // ˄
     }
 

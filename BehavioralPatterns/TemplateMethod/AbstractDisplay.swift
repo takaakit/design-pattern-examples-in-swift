@@ -9,19 +9,19 @@ public class AbstractDisplay {
 
     public func open() {
         // ˅
-        
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
     public func write() {
         // ˅
-        
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
     public func close() {
         // ˅
-        
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 

@@ -1,12 +1,15 @@
 import Foundation
 
-// At the time of printing, create an instance of the printer for the first time.
-// In order to spend time creating a printer, call a heavy task when creating a printer instance.
+/*
+Print on a named printer. Setting and changing the printer name is done by Proxy (ProxyPrinter).
+At the time of printing, create an instance of the RealSubject (RealPrinter) for the first time.
+*/
 
-let p = PrinterProxy(name: "Emily's printer")
-print("The current printer is " + p.printerName + ".")
-p.printerName = "William's printer"
-print("The current printer is " + p.printerName + ".")
+let p = ProxyPrinter(name: "PRINTER-A")
+print("The current printer is \(p.getName()).")
+p.changeName(name: "PRINTER-B")
+print("The current printer is \(p.getName()).")
+
+print("Print start.")
 p.output(content: "Nice to meet you.")
-
-exit(0)
+print("Print exit.")

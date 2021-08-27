@@ -33,7 +33,7 @@ public class AppMain: NSView {
         // ˄
     }
 
-    @IBAction public func pushCancelButton(_ sender: NSButton) {
+    @IBAction public func pushClearButton(_ sender: NSButton) {
         // ˅
         canvas.clear()
         history.clear()

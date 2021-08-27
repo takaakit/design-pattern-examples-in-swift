@@ -7,26 +7,27 @@ public class FileSystemElement: Element {
     
     // ˄
 
-    public let name: String
-
-    public let size: Int
-
-    public init(name: String, size: Int) {
+    public func getName() -> String {
         // ˅
-        self.name = name
-        self.size = size
+        fatalError("An abstract method has been executed.")
+        // ˄
+    }
+
+    public func getSize() -> Int {
+        // ˅
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
     public func accept(visitor: Visitor) {
         // ˅
-        
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
     public func toString() -> String {
         // ˅
-        return name + " (" + String(size) + ")"
+        return "\(getName()) (\(String(getSize())))"
         // ˄
     }
 

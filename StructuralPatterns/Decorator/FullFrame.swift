@@ -30,13 +30,13 @@ public class FullFrame: Frame {
     public override func getLineText(row: Int) -> String {
         // ˅
         if row == 0 {
-            return "+" + createLine(ch: "-", size: display.getColumns()) + "+"      // Upper frame
+            return "+" + createLine(ch: "-", size: display.getColumns()) + "+"  // Upper frame
         }
         else if row == display.getRows() + 1 {
-            return "+" + createLine(ch: "-", size: display.getColumns()) + "+"      // Bottom frame
+            return "+" + createLine(ch: "-", size: display.getColumns()) + "+"  // Bottom frame
         }
         else {
-            return "|" + display.getLineText(row: row - 1)! + "|"                   // Other
+            return "|" + display.getLineText(row: row - 1) + "|"                // Other
         }
         // ˄
     }

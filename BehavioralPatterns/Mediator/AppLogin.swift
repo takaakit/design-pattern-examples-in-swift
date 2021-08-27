@@ -60,7 +60,7 @@ public class AppLogin: NSView, Mediator {
     public func colleagueChanged() {
         // ˅
         if buttonOk.isHighlighted == true || buttonCancel.isHighlighted == true {
-            exit(0)
+            self.window?.close()
         }
         else {
             if radioButtonGuest.isHighlighted == true {     // Guest mode

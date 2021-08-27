@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7121BE8521201AA0006DABA4 /* Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121BE7F21201AA0006DABA4 /* Strategy.swift */; };
-		7121BE8621201AA0006DABA4 /* StrategyB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121BE8021201AA0006DABA4 /* StrategyB.swift */; };
 		7121BE8721201AA0006DABA4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121BE8121201AA0006DABA4 /* Player.swift */; };
-		7121BE8821201AA0006DABA4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121BE8221201AA0006DABA4 /* Hand.swift */; };
-		7121BE8921201AA0006DABA4 /* StrategyA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121BE8321201AA0006DABA4 /* StrategyA.swift */; };
 		7121BE8A21201AA0006DABA4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7121BE8421201AA0006DABA4 /* main.swift */; };
+		7178C7292651F6C10088DF7C /* GameResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C7282651F6C00088DF7C /* GameResultType.swift */; };
+		7178C72B2651F6D40088DF7C /* HandSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C72A2651F6D40088DF7C /* HandSignal.swift */; };
+		7178C72D2651F6E00088DF7C /* MirrorStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C72C2651F6E00088DF7C /* MirrorStrategy.swift */; };
+		7178C72F2651F6ED0088DF7C /* RandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C72E2651F6ED0088DF7C /* RandomStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,11 +31,12 @@
 /* Begin PBXFileReference section */
 		7121BE7E21201AA0006DABA4 /* Strategy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Strategy; sourceTree = BUILT_PRODUCTS_DIR; };
 		7121BE7F21201AA0006DABA4 /* Strategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strategy.swift; sourceTree = "<group>"; };
-		7121BE8021201AA0006DABA4 /* StrategyB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyB.swift; sourceTree = "<group>"; };
 		7121BE8121201AA0006DABA4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		7121BE8221201AA0006DABA4 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
-		7121BE8321201AA0006DABA4 /* StrategyA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyA.swift; sourceTree = "<group>"; };
 		7121BE8421201AA0006DABA4 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7178C7282651F6C00088DF7C /* GameResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultType.swift; sourceTree = "<group>"; };
+		7178C72A2651F6D40088DF7C /* HandSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandSignal.swift; sourceTree = "<group>"; };
+		7178C72C2651F6E00088DF7C /* MirrorStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirrorStrategy.swift; sourceTree = "<group>"; };
+		7178C72E2651F6ED0088DF7C /* RandomStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +53,13 @@
 		7121BE1E211FFE08006DABA4 = {
 			isa = PBXGroup;
 			children = (
-				7121BE8221201AA0006DABA4 /* Hand.swift */,
+				7178C72E2651F6ED0088DF7C /* RandomStrategy.swift */,
+				7178C72C2651F6E00088DF7C /* MirrorStrategy.swift */,
+				7178C72A2651F6D40088DF7C /* HandSignal.swift */,
+				7178C7282651F6C00088DF7C /* GameResultType.swift */,
 				7121BE8421201AA0006DABA4 /* main.swift */,
 				7121BE8121201AA0006DABA4 /* Player.swift */,
 				7121BE7F21201AA0006DABA4 /* Strategy.swift */,
-				7121BE8321201AA0006DABA4 /* StrategyA.swift */,
-				7121BE8021201AA0006DABA4 /* StrategyB.swift */,
 				7121BE7E21201AA0006DABA4 /* Strategy */,
 			);
 			sourceTree = "<group>";
@@ -88,12 +91,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = non;
 				TargetAttributes = {
 					7121BE26211FFE08006DABA4 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -103,6 +106,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7121BE1E211FFE08006DABA4;
 			productRefGroup = 7121BE1E211FFE08006DABA4;
@@ -119,12 +123,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7121BE8821201AA0006DABA4 /* Hand.swift in Sources */,
 				7121BE8521201AA0006DABA4 /* Strategy.swift in Sources */,
+				7178C72D2651F6E00088DF7C /* MirrorStrategy.swift in Sources */,
+				7178C72F2651F6ED0088DF7C /* RandomStrategy.swift in Sources */,
 				7121BE8A21201AA0006DABA4 /* main.swift in Sources */,
-				7121BE8921201AA0006DABA4 /* StrategyA.swift in Sources */,
+				7178C7292651F6C10088DF7C /* GameResultType.swift in Sources */,
 				7121BE8721201AA0006DABA4 /* Player.swift in Sources */,
-				7121BE8621201AA0006DABA4 /* StrategyB.swift in Sources */,
+				7178C72B2651F6D40088DF7C /* HandSignal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +162,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -217,6 +223,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -248,6 +255,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -256,7 +264,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -264,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -271,7 +280,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

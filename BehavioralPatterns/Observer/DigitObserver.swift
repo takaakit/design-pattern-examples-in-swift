@@ -2,15 +2,25 @@
 
 // ˄
 
-// Display values with digits.
+// Display values as a number.
 public class DigitObserver: Observer {
     // ˅
 
     // ˄
 
-    public func update(number: Number) {
+    private let numberSubject: NumberSubject
+
+    public init(numberSubject: NumberSubject) {
         // ˅
-        print("Digit    : \(number.value)")
+        self.numberSubject = numberSubject
+        // ˄
+    }
+
+    public func update(changedSubject: Subject) {
+        // ˅
+        if changedSubject === self.numberSubject {
+            print("Digit    : \(self.numberSubject.getValue())")
+        }
         // ˄
     }
 

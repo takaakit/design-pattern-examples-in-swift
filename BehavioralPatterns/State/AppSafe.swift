@@ -14,16 +14,18 @@ public class AppSafe: NSView, Context {
     // ˄
 
     // Current state
-    private var state: State = DaytimeState()
+    private var state: State = DaytimeState.getInstance()
     // ˅
     
     // ˄
 
+    // Current time
     @IBOutlet private weak var textTime: NSTextField!
     // ˅
     
     // ˄
 
+    // Display of security center
     @IBOutlet private weak var textMessage: NSTextView!
     // ˅
     
@@ -61,31 +63,25 @@ public class AppSafe: NSView, Context {
         // ˄
     }
 
-    @IBAction public func pushUseSafe(sender: Any) {
+    @IBAction public func pushUseButton(sender: Any) {
         // ˅
-        state.useSafe(context: self as Context)
+        state.use(context: self as Context)
         // ˄
     }
 
-    @IBAction public func pushSoundBell(sender: Any) {
+    @IBAction public func pushAlarmButton(sender: Any) {
         // ˅
-        state.soundBell(context: self as Context)
+        state.alarm(context: self as Context)
         // ˄
     }
 
-    @IBAction public func pushCall(sender: Any) {
+    @IBAction public func pushPhoneButton(sender: Any) {
         // ˅
-        state.call(context: self as Context)
+        state.phone(context: self as Context)
         // ˄
     }
 
-    @IBAction public func pushExit(sender: Any) {
-        // ˅
-        exit(0)
-        // ˄
-    }
-
-    private func setTime(hour: Int) {
+    public func setTime(hour: Int) {
         // ˅
         var clockString: String = "Current Time : "
         if hour < 10 {

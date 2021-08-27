@@ -7,31 +7,41 @@ public class NightState: State {
     
     // ˄
 
-    // Set time
+    private static let instance: NightState = NightState()
+
+    public class func getInstance() -> NightState {
+        // ˅
+        return instance
+        // ˄
+    }
+
+    private init() {
+        // ˅
+        
+        // ˄
+    }
+
     public func setTime(context: Context, hour: Int) {
         // ˅
         if 9 <= hour && hour < 17 {
-            context.changeState(state: DaytimeState())
+            context.changeState(state: DaytimeState.getInstance())
         }
         // ˄
     }
 
-    // Use a safe
-    public func useSafe(context: Context) {
+    public func use(context: Context) {
         // ˅
         context.callSecurityGuardsRoom(msg: "Emergency: Use a safe at night!")
         // ˄
     }
 
-    // Sound a emergency bell
-    public func soundBell(context: Context) {
+    public func alarm(context: Context) {
         // ˅
         context.callSecurityGuardsRoom(msg: "Sound a emergency bell at night")
         // ˄
     }
 
-    // Make a normal call
-    public func call(context: Context) {
+    public func phone(context: Context) {
         // ˅
         context.recordSecurityLog(msg: "Record a night call")
         // ˄

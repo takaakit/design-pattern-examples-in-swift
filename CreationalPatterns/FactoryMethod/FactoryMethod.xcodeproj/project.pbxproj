@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7178C7472651FD9A0088DF7C /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C7462651FD9A0088DF7C /* CreditCard.swift */; };
+		7178C7492651FDAA0088DF7C /* CreditCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C7482651FDAA0088DF7C /* CreditCardFactory.swift */; };
+		7178C74B2651FDB40088DF7C /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C74A2651FDB40088DF7C /* Factory.swift */; };
+		7178C74D2651FDBD0088DF7C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C74C2651FDBD0088DF7C /* Product.swift */; };
 		71DD2F50212C259400C3E110 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2F49212C259400C3E110 /* main.swift */; };
-		71DD2F51212C259400C3E110 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2F4B212C259400C3E110 /* Factory.swift */; };
-		71DD2F52212C259400C3E110 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2F4C212C259400C3E110 /* Product.swift */; };
-		71DD2F53212C259400C3E110 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2F4E212C259400C3E110 /* CreditCard.swift */; };
-		71DD2F54212C259400C3E110 /* CreditCardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2F4F212C259400C3E110 /* CreditCardFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,12 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7178C7462651FD9A0088DF7C /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		7178C7482651FDAA0088DF7C /* CreditCardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardFactory.swift; sourceTree = "<group>"; };
+		7178C74A2651FDB40088DF7C /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		7178C74C2651FDBD0088DF7C /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		71DD2F48212C259300C3E110 /* FactoryMethod */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FactoryMethod; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DD2F49212C259400C3E110 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		71DD2F4B212C259400C3E110 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		71DD2F4C212C259400C3E110 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		71DD2F4E212C259400C3E110 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
-		71DD2F4F212C259400C3E110 /* CreditCardFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,29 +49,29 @@
 		7121BE1E211FFE08006DABA4 = {
 			isa = PBXGroup;
 			children = (
-				71DD2F4A212C259400C3E110 /* Framework */,
-				71DD2F4D212C259400C3E110 /* IdCard */,
+				7178C74F2651FDD00088DF7C /* Framework */,
+				7178C74E2651FDC50088DF7C /* CreditCard */,
 				71DD2F49212C259400C3E110 /* main.swift */,
 				71DD2F48212C259300C3E110 /* FactoryMethod */,
 			);
 			sourceTree = "<group>";
 		};
-		71DD2F4A212C259400C3E110 /* Framework */ = {
+		7178C74E2651FDC50088DF7C /* CreditCard */ = {
 			isa = PBXGroup;
 			children = (
-				71DD2F4B212C259400C3E110 /* Factory.swift */,
-				71DD2F4C212C259400C3E110 /* Product.swift */,
+				7178C7462651FD9A0088DF7C /* CreditCard.swift */,
+				7178C7482651FDAA0088DF7C /* CreditCardFactory.swift */,
 			);
-			path = Framework;
+			path = CreditCard;
 			sourceTree = "<group>";
 		};
-		71DD2F4D212C259400C3E110 /* IdCard */ = {
+		7178C74F2651FDD00088DF7C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				71DD2F4E212C259400C3E110 /* CreditCard.swift */,
-				71DD2F4F212C259400C3E110 /* CreditCardFactory.swift */,
+				7178C74A2651FDB40088DF7C /* Factory.swift */,
+				7178C74C2651FDBD0088DF7C /* Product.swift */,
 			);
-			path = IdCard;
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,12 +101,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = non;
 				TargetAttributes = {
 					7121BE26211FFE08006DABA4 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -116,6 +116,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7121BE1E211FFE08006DABA4;
 			productRefGroup = 7121BE1E211FFE08006DABA4;
@@ -132,11 +133,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71DD2F53212C259400C3E110 /* CreditCard.swift in Sources */,
-				71DD2F54212C259400C3E110 /* CreditCardFactory.swift in Sources */,
-				71DD2F51212C259400C3E110 /* Factory.swift in Sources */,
+				7178C74B2651FDB40088DF7C /* Factory.swift in Sources */,
+				7178C7492651FDAA0088DF7C /* CreditCardFactory.swift in Sources */,
+				7178C74D2651FDBD0088DF7C /* Product.swift in Sources */,
+				7178C7472651FD9A0088DF7C /* CreditCard.swift in Sources */,
 				71DD2F50212C259400C3E110 /* main.swift in Sources */,
-				71DD2F52212C259400C3E110 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +170,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -229,6 +231,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -260,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -268,7 +272,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -276,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -283,7 +288,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

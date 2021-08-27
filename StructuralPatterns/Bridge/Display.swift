@@ -15,7 +15,7 @@ public class Display {
         // ˄
     }
 
-    public func display() {
+    public func output() {
         // ˅
         open()
         write()

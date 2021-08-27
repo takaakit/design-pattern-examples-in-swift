@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7178C7512651FF5B0088DF7C /* ProxyPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178C7502651FF5B0088DF7C /* ProxyPrinter.swift */; };
 		71DD2FA7212C353000C3E110 /* RealPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2FA3212C353000C3E110 /* RealPrinter.swift */; };
 		71DD2FA8212C353000C3E110 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2FA4212C353000C3E110 /* Printer.swift */; };
-		71DD2FA9212C353000C3E110 /* PrinterProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2FA5212C353000C3E110 /* PrinterProxy.swift */; };
 		71DD2FAA212C353000C3E110 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DD2FA6212C353000C3E110 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,10 +26,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7178C7502651FF5B0088DF7C /* ProxyPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyPrinter.swift; sourceTree = "<group>"; };
 		71DD2FA2212C353000C3E110 /* Proxy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Proxy; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DD2FA3212C353000C3E110 /* RealPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealPrinter.swift; sourceTree = "<group>"; };
 		71DD2FA4212C353000C3E110 /* Printer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
-		71DD2FA5212C353000C3E110 /* PrinterProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterProxy.swift; sourceTree = "<group>"; };
 		71DD2FA6212C353000C3E110 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,9 +47,9 @@
 		7121BE1E211FFE08006DABA4 = {
 			isa = PBXGroup;
 			children = (
+				7178C7502651FF5B0088DF7C /* ProxyPrinter.swift */,
 				71DD2FA6212C353000C3E110 /* main.swift */,
 				71DD2FA4212C353000C3E110 /* Printer.swift */,
-				71DD2FA5212C353000C3E110 /* PrinterProxy.swift */,
 				71DD2FA3212C353000C3E110 /* RealPrinter.swift */,
 				71DD2FA2212C353000C3E110 /* Proxy */,
 			);
@@ -82,12 +82,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = non;
 				TargetAttributes = {
 					7121BE26211FFE08006DABA4 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -97,6 +97,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7121BE1E211FFE08006DABA4;
 			productRefGroup = 7121BE1E211FFE08006DABA4;
@@ -114,9 +115,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DD2FA8212C353000C3E110 /* Printer.swift in Sources */,
-				71DD2FA9212C353000C3E110 /* PrinterProxy.swift in Sources */,
 				71DD2FAA212C353000C3E110 /* main.swift in Sources */,
 				71DD2FA7212C353000C3E110 /* RealPrinter.swift in Sources */,
+				7178C7512651FF5B0088DF7C /* ProxyPrinter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +150,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -209,6 +211,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -240,6 +243,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -248,7 +252,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -256,6 +260,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -263,7 +268,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

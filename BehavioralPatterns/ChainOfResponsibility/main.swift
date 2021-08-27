@@ -1,20 +1,21 @@
-import Foundation
-
-// Someone handles a trouble.
+/*
+A trouble is turned around among supporters, and the trouble will be handled by the supporter who can handle it.
+There are four types of supporters below:
+* LazySupporter doesn't handle any trouble
+* MoodySupporter handles odd ID troubles
+* SpecialSupporter handles a trouble of the target ID.
+* LimitedSupporter handles troubles below the limit ID.
+*/
 
 let emily = LazySupporter(name: "Emily")
 let william = MoodySupporter(name: "William")
-let amelia = SpecialSupporter(name: "Amelia", targetId: 153)
-let michael = SpecialSupporter(name: "Michael", targetId: 340)
-let joseph = LimitedSupporter(name: "Joseph", limitId: 250)
-let lily = LimitedSupporter(name: "Lily", limitId: 350)
+let amelia = SpecialSupporter(name: "Amelia", targetId: 6)
+let joseph = LimitedSupporter(name: "Joseph", limitId: 5)
 
 // Make a chain.
-emily.setNext(next: michael)?.setNext(next: amelia)?.setNext(next: joseph)?.setNext(next: lily)?.setNext(next: william)
+_ = emily.setNext(next: william)?.setNext(next: amelia)?.setNext(next: joseph)
 
 // Various troubles occurred.
-for i in stride(from: 0, to: 500, by: 17) {
+for i in 0...9 {
     emily.support(trouble: Trouble(id: i))
 }
-
-exit(0)

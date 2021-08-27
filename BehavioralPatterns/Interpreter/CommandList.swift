@@ -16,7 +16,7 @@ public class CommandList: Node {
         // ˅
         while true {
             if context.getToken() == "" {
-                print("WARNING: " + "Failed to parse")
+                print("Missing 'end'")
                 return
             }
             else if context.getToken() == "end" {
@@ -24,9 +24,9 @@ public class CommandList: Node {
                 break
             }
             else {
-                let commandNode = Command()
-                commandNode.parse(context: context)
-                nodes.append(commandNode)
+                let aNone = Command()
+                aNone.parse(context: context)
+                nodes.append(aNone) // Hold the parsed node
             }
         }
         // ˄
@@ -34,13 +34,14 @@ public class CommandList: Node {
 
     public func toString() -> String {
         // ˅
-        var strNodes: String = ""
+        var strNodes: String = "["
         for i in 0..<nodes.count {
             strNodes += nodes[i].toString()
             if i < nodes.count - 1 {
                 strNodes += ", "
             }
         }
+        strNodes += "]"
         return strNodes
         // ˄
     }

@@ -11,23 +11,20 @@ public class Display {
     // Column width
     public func getColumns() -> Int {
         // ˅
-        print("Display.getColumns() must be overriden.")
-        exit(1)
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
     // Number of rows
     public func getRows() -> Int {
         // ˅
-        print("Display.getRows() must be overriden.")
-        exit(1)
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
-    public func getLineText(row: Int) -> String? {
+    public func getLineText(row: Int) -> String {
         // ˅
-        print("Display.getLineText() must be overriden.")
-        exit(1)
+        fatalError("An abstract method has been executed.")
         // ˄
     }
 
@@ -35,7 +32,7 @@ public class Display {
     public func show() {
         // ˅
         for i in 0..<getRows() {
-            print(getLineText(row: i)!)
+            print(getLineText(row: i))
         }
         // ˄
     }

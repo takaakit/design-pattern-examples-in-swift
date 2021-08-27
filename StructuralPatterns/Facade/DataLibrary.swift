@@ -32,11 +32,11 @@ public class DataLibrary {
                 }
             }
             catch{
-                print("File read error. :" + fileName + "." + ext)
+                print("File read error. :\(fileName).\(ext)")
             }
         }
         else {
-            print("File not found. :" + fileName + "." + ext)
+            print("File not found. :\(fileName).\(ext)")
         }
         return data
         // ˄

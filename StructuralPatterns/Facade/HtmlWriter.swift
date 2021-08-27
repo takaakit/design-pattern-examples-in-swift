@@ -25,30 +25,23 @@ public class HtmlWriter {
     public func heading(title: String) {
         // ˅
         buffer.append("<html>")
-        buffer.append("<head><title>" + title + "</title></head>")
+        buffer.append("<head><title>\(title)</title></head>")
         buffer.append("<body>\n")
-        buffer.append("<h1>" + title + "</h1>\n")
+        buffer.append("<h1>\(title)</h1>\n")
         // ˄
     }
 
     // Write a paragraph
     public func paragraph(message: String) {
         // ˅
-        buffer.append("<p>" + message + "</p>\n")
-        // ˄
-    }
-
-    // Write a link
-    public func anchor(url: String, text: String) {
-        // ˅
-        buffer.append("<a href=\"" + url + "\">" + text + "</a>")
+        buffer.append("<p>\(message)</p>\n")
         // ˄
     }
 
     // Write a mail address
     public func mailto(mailAddress: String, userName: String) {
         // ˅
-        anchor(url: "mailto:" + mailAddress, text: userName)
+        anchor(url: "mailto:\(mailAddress)", text: userName)
         // ˄
     }
 
@@ -64,6 +57,13 @@ public class HtmlWriter {
             print("Failed to write")
             exit(1)
         }
+        // ˄
+    }
+
+    // Write a link
+    private func anchor(url: String, text: String) {
+        // ˅
+        buffer.append("<a href=\"\(url)\">\(text)</a>")
         // ˄
     }
 

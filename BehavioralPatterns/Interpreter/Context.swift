@@ -2,7 +2,7 @@
 
 // ˄
 
-// Analyze the syntax
+// Hold data which will be interpreted.
 public class Context {
     // ˅
 
@@ -31,13 +31,13 @@ public class Context {
         // ˄
     }
 
-    public func getToken() -> String? {
+    public func getToken() -> String {
         // ˅
         if currentIndex < nodes.count {
             return nodes[currentIndex]
         }
         else {
-            return nil
+            return ""
         }
         // ˄
     }
@@ -45,7 +45,7 @@ public class Context {
     public func slideToken(token: String) {
         // ˅
         if token != getToken() {
-            print("WARNING: " + token + " is expected but " + getToken()! + " was found.")
+            print("WARNING: \(token) is expected but \(getToken()) was found.")
             return
         }
         nextToken()
@@ -54,7 +54,7 @@ public class Context {
 
     public func getNumber() -> Int? {
         // ˅
-        return Int(getToken()!)
+        return Int(getToken())
         // ˄
     }
 

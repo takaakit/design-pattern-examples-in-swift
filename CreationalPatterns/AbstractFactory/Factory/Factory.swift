@@ -17,16 +17,5 @@ public protocol Factory {
 }
 
 // ˅
-func getFactory(classname: String) -> Factory {
-    if classname == "ListFactory" {
-        return ListFactory()
-    }
-    else if classname == "TableFactory" {
-        return TableFactory()
-    }
-    else {
-        print("Factory name is invalid.")
-        exit(1)
-    }
-}
+
 // ˄

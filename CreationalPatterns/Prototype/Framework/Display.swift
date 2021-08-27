@@ -4,7 +4,7 @@
 
 public protocol Display {
 
-    func createClone() throws -> Display
+    func clone() -> Display
 
     func show(message: String)
 

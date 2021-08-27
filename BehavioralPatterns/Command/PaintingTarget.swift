@@ -4,7 +4,7 @@
 
 public protocol PaintingTarget {
 
-    func paint(paintingPosX: Double, paintingPosY: Double)
+    func paint(x: Double, y: Double)
 
     func clear()
 

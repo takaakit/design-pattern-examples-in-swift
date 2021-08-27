@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71A2221F213FE3D200566A3E /* big-.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71A221E0213FBC9C00566A3E /* big-.txt */; };
 		71A22220213FE3D200566A3E /* big0.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71A221E9213FBC9D00566A3E /* big0.txt */; };
 		71A22221213FE3D200566A3E /* big1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71A221E3213FBC9C00566A3E /* big1.txt */; };
 		71A22222213FE3D200566A3E /* big2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 71A221E4213FBC9C00566A3E /* big2.txt */; };
@@ -31,7 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				71A2221F213FE3D200566A3E /* big-.txt in CopyFiles */,
 				71A22220213FE3D200566A3E /* big0.txt in CopyFiles */,
 				71A22221213FE3D200566A3E /* big1.txt in CopyFiles */,
 				71A22222213FE3D200566A3E /* big2.txt in CopyFiles */,
@@ -49,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		71A221DF213FBC9C00566A3E /* big4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = big4.txt; sourceTree = "<group>"; };
-		71A221E0213FBC9C00566A3E /* big-.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "big-.txt"; sourceTree = "<group>"; };
 		71A221E1213FBC9C00566A3E /* big3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = big3.txt; sourceTree = "<group>"; };
 		71A221E2213FBC9C00566A3E /* big6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = big6.txt; sourceTree = "<group>"; };
 		71A221E3213FBC9C00566A3E /* big1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = big1.txt; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 				71DD2F9B212C33BA00C3E110 /* LargeSizeCharFactory.swift */,
 				71DD2F9A212C33BA00C3E110 /* LargeSizeString.swift */,
 				71DD2F9D212C33BA00C3E110 /* main.swift */,
-				71A221E0213FBC9C00566A3E /* big-.txt */,
 				71A221E9213FBC9D00566A3E /* big0.txt */,
 				71A221E3213FBC9C00566A3E /* big1.txt */,
 				71A221E4213FBC9C00566A3E /* big2.txt */,
@@ -126,12 +122,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = non;
 				TargetAttributes = {
 					7121BE26211FFE08006DABA4 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -141,6 +137,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7121BE1E211FFE08006DABA4;
 			productRefGroup = 7121BE1E211FFE08006DABA4;
@@ -193,6 +190,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -253,6 +251,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -284,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,7 +292,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -300,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +308,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

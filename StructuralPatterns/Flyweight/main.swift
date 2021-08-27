@@ -1,15 +1,45 @@
 import Foundation
 
-// First, create instances for displaying large size characters, then display large size character string using that instances.
+/*
+Display a string consisting of large characters (0-9 digits only).
+Large character objects are not created until they are needed.
+And the created objects are reused.
 
-let argv = ProcessInfo.processInfo.arguments
-if argv.count != 2 {
-    print("Usage: flywight digits")
-    print("Usage: flywight 1212123")
-}
-else {
-    let bs = LargeSizeString(string: argv[1])
-    bs.display()
-}
+Example Output
+-----
+Please enter digits (ex. 1212123): 123
+              
+     ####     
+      ###     
+      ###     
+      ###     
+      ###     
+      ###     
+    #######   
+              
 
-exit(0)
+              
+   ########   
+         ###  
+         ###  
+   ########   
+  #           
+  #           
+  ##########  
+              
+
+              
+   ########   
+         ###  
+         ###  
+   ########   
+         ###  
+  #      ###  
+   ########
+*/
+
+print("Please enter digits (ex. 1212123):")
+let inputValue = readLine()!
+
+let bs = LargeSizeString(string: inputValue)
+bs.display()

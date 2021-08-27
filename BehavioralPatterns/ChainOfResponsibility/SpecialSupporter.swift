@@ -17,7 +17,7 @@ public class SpecialSupporter: Supporter {
     }
 
     // Troubles with the specific ID are handled.
-    public override func handle(trouble: Trouble) -> Bool {
+    public override func canHandle(trouble: Trouble) -> Bool {
         // ˅
         return trouble.id == targetId
         // ˄

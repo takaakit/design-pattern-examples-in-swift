@@ -1,50 +1,37 @@
 import Foundation
 
 /*
-A game of rock-scissors-paper.
-There are two strategies below.
-
-* When winning a game, show the same hand at the next time.
-* Calculate a hand from the previous hand stochastically.
+A game of rock-scissors-paper. Two strategies are available:
+* Random Strategy: showing a random hand signal.
+* Mirror Strategy: showing a hand signal from the previous opponent's hand signal.
 */
 
-let argv = ProcessInfo.processInfo.arguments
-if argv.count != 3 {
-    print("User: strategy RandomSeedNumber1 RandomSeedNumber2")
-    print("User: strategy 314 15")
-}
-else {
-    let randomSeed1: Int? = Int(argv[1])
-    let randomSeed2: Int? = Int(argv[2])
-    if randomSeed1 == nil || randomSeed2 == nil {
-        print("The command line argument is illegal.")
-        exit(1)
-    }
-    let player1 = Player(name: "Emily", strategy: StrategyA(randomSeed: randomSeed1!))
-    let player2 = Player(name: "James", strategy: StrategyB(randomSeed: randomSeed2!))
-    
-    for _ in 0..<99 {
-        let nextHand1 = player1.nextHand()
-        let nextHand2 = player2.nextHand()
-        if nextHand1.isStrongerThan(hand: nextHand2) {
-            print("Winner: " + player1.toString())
-            player1.won()
-            player2.lost()
-        }
-        else if nextHand2.isStrongerThan(hand: nextHand1) {
-            print("Winner: " + player2.toString())
-            player1.lost()
-            player2.won()
-        }
-        else {
-            print("Draw...")
-            player1.drew()
-            player2.drew()
-        }
-    }
-    print("RESULT:")
-    print(player1.toString())
-    print(player2.toString())
-}
+let player1 = Player(name: "Emily", strategy: RandomStrategy())
+let player2 = Player(name: "James", strategy: MirrorStrategy())
 
-exit(0)
+for _ in 0..<100 {
+    let handOfPlayer1 = player1.showHandSignal()
+    let handOfPlayer2 = player2.showHandSignal()
+    var resultOfPlayer1: GameResultType
+    var resultOfPlayer2: GameResultType
+    if handOfPlayer1.isStrongerThan(hand: handOfPlayer2) {
+        print("Winner: " + player1.toString())
+        resultOfPlayer1 = GameResultType.win
+        resultOfPlayer2 = GameResultType.loss
+    }
+    else if handOfPlayer2.isStrongerThan(hand: handOfPlayer1) {
+        print("Winner: " + player2.toString())
+        resultOfPlayer1 = GameResultType.loss
+        resultOfPlayer2 = GameResultType.win
+    }
+    else {
+        print("Draw...")
+        resultOfPlayer1 = GameResultType.draw
+        resultOfPlayer2 = GameResultType.draw
+    }
+    player1.notifyGameResult(result: resultOfPlayer1, ownHand: handOfPlayer1, opponentsHand: handOfPlayer2)
+    player2.notifyGameResult(result: resultOfPlayer2, ownHand: handOfPlayer2, opponentsHand: handOfPlayer1)
+}
+print("RESULT:")
+print(player1.toString())
+print(player2.toString())

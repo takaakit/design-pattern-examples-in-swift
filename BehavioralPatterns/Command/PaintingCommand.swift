@@ -14,10 +14,7 @@ public class PaintingCommand: Command {
     // Painting position y
     private let paintingPosY: Double
 
-    internal var paintingTarget: PaintingTarget
-    // ˅
-    
-    // ˄
+    private let paintingTarget: PaintingTarget
 
     public init(paintingObject: PaintingTarget, paintingPosX: Double, paintingPosY: Double) {
         // ˅
@@ -29,7 +26,7 @@ public class PaintingCommand: Command {
 
     public func execute() {
         // ˅
-        paintingTarget.paint(paintingPosX: paintingPosX, paintingPosY: paintingPosY)
+        paintingTarget.paint(x: paintingPosX, y: paintingPosY)
         // ˄
     }
 

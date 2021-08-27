@@ -21,7 +21,7 @@ public class Manager {
     public func getDisplay(displayName: String) -> Display? {
         // ˅
         let d: Display = displays[displayName]!
-        return try? d.createClone()
+        return d.clone()
         // ˄
     }
 

@@ -4,19 +4,15 @@
 
 public protocol State {
 
-    func toString() -> String
-
-    // Set time
     func setTime(context: Context, hour: Int)
 
-    // Use a safe
-    func useSafe(context: Context)
+    func use(context: Context)
 
-    // Sound a emergency bell
-    func soundBell(context: Context)
+    func alarm(context: Context)
 
-    // Make a normal call
-    func call(context: Context)
+    func phone(context: Context)
+
+    func toString() -> String
 
     // ˅
     

@@ -31,9 +31,9 @@ public class SideFrame: Frame {
         // ˄
     }
 
-    public override func getLineText(row: Int) -> String? {
+    public override func getLineText(row: Int) -> String {
         // ˅
-        return String(frameChar) + display.getLineText(row: row)! + String(frameChar)
+        return String(frameChar) + display.getLineText(row: row) + String(frameChar)
         // ˄
     }
 

@@ -7,16 +7,35 @@ public class File: FileSystemElement {
     
     // ˄
 
-    public override init(name: String, size: Int) {
+    private let name: String
+
+    private let size: Int
+
+    public init(name: String, size: Int) {
         // ˅
-        super.init(name: name, size: size)
+        self.name = name
+        self.size = size
+        // ˄
+    }
+
+    // File name
+    public override func getName() -> String {
+        // ˅
+        return name
+        // ˄
+    }
+
+    // File size
+    public override func getSize() -> Int {
+        // ˅
+        return size
         // ˄
     }
 
     // Print this element with the "upperPath".
     public override func print(upperPath: String) {
         // ˅
-        Swift.print(upperPath + "/" + toString())
+        Swift.print("\(upperPath)/\(self.toString())")
         // ˄
     }
 

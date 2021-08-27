@@ -14,7 +14,7 @@ public class MoodySupporter: Supporter {
     }
 
     // Troubles with an odd ID are handled.
-    public override func handle(trouble: Trouble) -> Bool {
+    public override func canHandle(trouble: Trouble) -> Bool {
         // ˅
         return trouble.id % 2 == 1
         // ˄

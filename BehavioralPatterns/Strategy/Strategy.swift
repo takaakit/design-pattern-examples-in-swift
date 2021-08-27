@@ -4,9 +4,11 @@
 
 public protocol Strategy {
 
-    func nextHand() -> Hand
+    // Show a hand signal.
+    func showHandSignal() -> HandSignal
 
-    func learn(win: Bool)
+    // Notify a game result.
+    func notifyGameResult(result: GameResultType, ownHand: HandSignal, opponentsHand: HandSignal)
 
     // ˅
     

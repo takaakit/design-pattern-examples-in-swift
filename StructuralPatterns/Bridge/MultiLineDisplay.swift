@@ -14,7 +14,7 @@ public class MultiLineDisplay: Display {
     }
 
     // Repeat display for the specified number of times
-    public func displayMultiple(times: Int) {
+    public func outputMultiple(times: Int) {
         // ˅
         open()
         for _ in 0..<times {

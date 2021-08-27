@@ -15,7 +15,7 @@ public class TableLink: Link {
 
     public override func toHTML() -> String {
         // ˅
-        return "  <td><a href=\"" + url + "\">" + name + "</a></td>\n"
+        return "  <td><a href=\"\(url)\">\(name)</a></td>\n"
         // ˄
     }
 

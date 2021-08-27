@@ -21,16 +21,19 @@ public class Repeat: Node {
     public func parse(context: Context) {
         // ˅
         context.slideToken(token: "repeat")
+
         number = context.getNumber()!
-        context.nextToken()
-        commandList = CommandList()
-        commandList!.parse(context: context)
+        context.slideToken(token: String(number))
+
+        let aCommandList = CommandList()
+        aCommandList.parse(context: context)
+        self.commandList = aCommandList // Hold the parsed command list
         // ˄
     }
 
     public func toString() -> String {
         // ˅
-        return "[repeat " + String(number) + " " + commandList!.toString() + "]"
+        return "repeat \(String(number)) \(commandList!.toString())"
         // ˄
     }
 

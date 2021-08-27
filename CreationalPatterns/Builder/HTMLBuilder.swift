@@ -9,7 +9,7 @@ public class HTMLBuilder: Builder {
     // ˄
 
     // File name to create
-    public var result: String = ""
+    public var fileName: String = ""
     // ˅
     
     // ˄
@@ -22,16 +22,16 @@ public class HTMLBuilder: Builder {
     // Make a title of HTML file
     public func createTitle(title: String) {
         // ˅
-        result = title + ".html"        // Set a title as a file name
-        outputData.append("<html><head><title>" + title + "</title></head><body>\n")   // Write a title
-        outputData.append("<h1>" + title + "</h1>\n")
+        fileName = "\(title).html"        // Set a title as a file name
+        outputData.append("<html><head><title>\(title)</title></head><body>\n")   // Write a title
+        outputData.append("<h1>\(title)</h1>\n")
         // ˄
     }
 
     // Make a section of HTML file
     public func createSection(section: String) {
         // ˅
-        outputData.append("<p>" + section + "</p>\n")        // Write a section
+        outputData.append("<p>\(section)</p>\n")        // Write a section
         // ˄
     }
 
@@ -40,7 +40,7 @@ public class HTMLBuilder: Builder {
         // ˅
         outputData.append("<ul>\n")                          // Write items
         for i in 0..<items.count {
-            outputData.append("<li>" + items[i] + "</li>\n")
+            outputData.append("<li>\(items[i])</li>\n")
         }
         outputData.append("</ul>\n")
         // ˄
@@ -51,12 +51,18 @@ public class HTMLBuilder: Builder {
         outputData.append("</body></html\n")
         
         do {
-            try outputData.write(toFile: result, atomically: true, encoding: String.Encoding.utf8)
+            try outputData.write(toFile: fileName, atomically: true, encoding: String.Encoding.utf8)
         }
         catch {
             print("Failed to write")
             exit(1)
         }
+        // ˄
+    }
+
+    public func getFileName() -> String {
+        // ˅
+        return fileName
         // ˄
     }
 

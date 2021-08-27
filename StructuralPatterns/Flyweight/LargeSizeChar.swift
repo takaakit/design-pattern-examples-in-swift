@@ -8,8 +8,6 @@ public class LargeSizeChar {
     
     // ˄
 
-    private let charName: UnicodeScalar
-
     // Display data of the large size character
     private var displayData: String = ""
     // ˅
@@ -18,18 +16,16 @@ public class LargeSizeChar {
 
     public init(charName: UnicodeScalar) {
         // ˅
-        self.charName = charName
-        
-        if let path = Bundle.main.path(forResource: "big" + String(charName), ofType: "txt") {
+        if let path = Bundle.main.path(forResource: "big\(String(charName))", ofType: "txt") {
             do {
                 self.displayData = try String(contentsOfFile: path, encoding: .utf8)
             }
             catch {
-                self.displayData = String(self.charName) + "?"
+                self.displayData = String(charName) + "?"
             }
         }
         else {
-            self.displayData = String(self.charName) + "?"
+            self.displayData = String(charName) + "?"
         }
         // ˄
     }

@@ -16,15 +16,18 @@ public class Program: Node {
     public func parse(context: Context) {
         // ˅
         context.slideToken(token: "program")
-        commandList = CommandList()
-        commandList!.parse(context: context)
+
+        let aCommandList = CommandList()
+        aCommandList.parse(context: context)
+
+        self.commandList = aCommandList // Hold the parsed command list
         // ˄
     }
 
     public func toString() -> String {
         // ˅
         if commandList != nil {
-            return "[program " + commandList!.toString() + "]"
+            return "[program \(commandList!.toString())]"
         }
         else {
             return ""

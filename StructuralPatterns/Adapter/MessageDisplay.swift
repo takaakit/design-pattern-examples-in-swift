@@ -17,13 +17,13 @@ public class MessageDisplay {
 
     public func displayWithHyphens() {
         // ˅
-        print("-- " + message + " --")
+        print("-- \(message) --")
         // ˄
     }
 
     public func displayWithBrackets() {
         // ˅
-        print("[[ " + message + " ]]")
+        print("[[ \(message) ]]")
         // ˄
     }
 

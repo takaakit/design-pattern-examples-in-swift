@@ -15,7 +15,7 @@ public class ListLink: Link {
 
     public override func toHTML() -> String {
         // ˅
-        return "  <li><a href=\"" + url + "\">" + name + "</a></li>\n"
+        return "  <li><a href=\"\(url)\">\(name)</a></li>\n"
         // ˄
     }
 

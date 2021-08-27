@@ -7,15 +7,16 @@ public class LargeSizeString {
     
     // ˄
 
-    private var largeSizeChars: [LargeSizeChar] = [LargeSizeChar]()
+    private var largeSizeChars: [LargeSizeChar]
     // ˅
     
     // ˄
 
     public init(string: String) {
         // ˅
+        self.largeSizeChars = [LargeSizeChar]()
         for uc in string.unicodeScalars {
-            largeSizeChars.append(LargeSizeCharFactory.getInstance().getLargeSizeChar(charName: uc))
+            self.largeSizeChars.append(LargeSizeCharFactory.getInstance().getLargeSizeChar(charName: uc))
         }
         // ˄
     }
@@ -23,7 +24,7 @@ public class LargeSizeString {
     public func display() {
         // ˅
         for i in 0..<largeSizeChars.count {
-            largeSizeChars[i].display()
+            self.largeSizeChars[i].display()
         }
         // ˄
     }

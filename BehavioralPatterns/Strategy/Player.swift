@@ -33,35 +33,28 @@ public class Player {
         // ˄
     }
 
-    // Calculate a hand from the strategy.
-    public func nextHand() -> Hand {
+    // Show a hand signal from the strategy.
+    public func showHandSignal() -> HandSignal {
         // ˅
-        return strategy.nextHand()
+        return strategy.showHandSignal()
         // ˄
     }
 
-    // Won a game.
-    public func won() {
+    // Notify a game result.
+    public func notifyGameResult(result: GameResultType, ownHand: HandSignal, opponentsHand: HandSignal) {
         // ˅
-        strategy.learn(win: true)
-        winCount += 1
-        gameCount += 1
-        // ˄
-    }
+        switch result {
+        case GameResultType.win:
+            winCount += 1
+            gameCount += 1
+        case GameResultType.loss:
+            lossCount += 1
+            gameCount += 1
+        case GameResultType.draw:
+            gameCount += 1
+        }
 
-    // Lost a game.
-    public func lost() {
-        // ˅
-        strategy.learn(win: false)
-        lossCount += 1
-        gameCount += 1
-        // ˄
-    }
-
-    // Drew a game.
-    public func drew() {
-        // ˅
-        gameCount += 1
+        strategy.notifyGameResult(result: result, ownHand: ownHand, opponentsHand: opponentsHand)
         // ˄
     }
 

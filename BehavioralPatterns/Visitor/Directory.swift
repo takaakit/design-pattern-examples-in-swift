@@ -7,7 +7,8 @@ public class Directory: FileSystemElement {
     
     // ˄
 
-    // Collection of elements
+    private let name: String
+
     private var elements: [FileSystemElement] = []
     // ˅
     
@@ -15,7 +16,7 @@ public class Directory: FileSystemElement {
 
     public init(name: String) {
         // ˅
-        super.init(name: name, size: 0)
+        self.name = name
         // ˄
     }
 
@@ -26,7 +27,25 @@ public class Directory: FileSystemElement {
         // ˄
     }
 
-    // Add an entry
+    // Directory name
+    public override func getName() -> String {
+        // ˅
+        return name
+        // ˄
+    }
+
+    // Directory size
+    public override func getSize() -> Int {
+        // ˅
+        var size = 0
+        for element in elements {
+            size += element.getSize()
+        }
+        return size
+        // ˄
+    }
+
+    // Add an element
     public func add(element: FileSystemElement) {
         // ˅
         elements.append(element)

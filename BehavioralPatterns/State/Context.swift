@@ -4,6 +4,9 @@
 
 public protocol Context {
 
+    // Set time
+    func setTime(hour: Int)
+
     // Change state
     func changeState(state: State)
 

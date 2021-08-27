@@ -14,13 +14,17 @@ public class Command: Node {
 
     public func parse(context: Context) {
         // ˅
+        var aNode: Node? = nil
         if context.getToken() == "repeat" {
-            node = Repeat()
+            aNode = Repeat()
+            aNode!.parse(context: context)
         }
         else {
-            node = Action()
+            aNode = Action()
+            aNode!.parse(context: context)
         }
-        node!.parse(context: context)
+
+        self.node = aNode   // Hold the parsed node
         // ˄
     }
 
