@@ -16,7 +16,7 @@ This project is available for the following objectives:
 
 > Swift code example:
 
-```swift:File class
+```swift
 // ˅
 
 // ˄
