@@ -7,7 +7,7 @@ public class LargeSizeCharFactory {
     
     // ˄
 
-    private var poolChars: [String: LargeSizeChar]
+    private var poolChars: [UnicodeScalar: LargeSizeChar]
     // ˅
     
     // ˄
@@ -23,10 +23,10 @@ public class LargeSizeCharFactory {
     // Create an instance of the large size character.
     public func getLargeSizeChar(charName: UnicodeScalar) -> LargeSizeChar {
         // ˅
-        var lsc: LargeSizeChar? = poolChars[String(charName)]
+        var lsc: LargeSizeChar? = poolChars[charName]
         if lsc == nil {
             lsc = LargeSizeChar(charName: charName)     // Create an instance
-            poolChars[String(charName)] = lsc
+            poolChars[charName] = lsc
         }
         return lsc!
         // ˄
@@ -34,7 +34,7 @@ public class LargeSizeCharFactory {
 
     private init() {
         // ˅
-        self.poolChars = [String: LargeSizeChar]()
+        self.poolChars = [UnicodeScalar: LargeSizeChar]()
         // ˄
     }
 
