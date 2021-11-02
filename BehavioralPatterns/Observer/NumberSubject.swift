@@ -2,6 +2,7 @@
 
 // ˄
 
+// Holds a value and notifies observers when the value is set.
 public class NumberSubject: Subject {
     // ˅
     
