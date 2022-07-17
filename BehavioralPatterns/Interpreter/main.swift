@@ -33,6 +33,7 @@ After parsing  : [program [repeat 4 [forward, right]]]
 ```
 */
 
+// Reads commands line by line from the "program.txt" and parses them.
 if let path: String = Bundle.main.path(forResource: "program", ofType: "txt") {
     do {
         let contents = try String(contentsOfFile: path, encoding: .utf8)

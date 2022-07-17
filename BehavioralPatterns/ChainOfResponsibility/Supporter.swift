@@ -38,7 +38,7 @@ public class Supporter {
         // ˄
     }
 
-    // Set a next supporter.
+    // Set a next supporter and return it.
     public func setNext(next: Supporter) -> Supporter? {
         // ˅
         self.next = next

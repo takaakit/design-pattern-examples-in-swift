@@ -20,6 +20,7 @@ public class HistoryCommand: Command {
         // ˄
     }
 
+    // Execute all past commands
     public func execute() {
         // ˅
         for pastCommand in pastCommands {
