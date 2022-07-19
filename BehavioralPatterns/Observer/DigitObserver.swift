@@ -18,6 +18,7 @@ public class DigitObserver: Observer {
 
     public func update(changedSubject: Subject) {
         // ˅
+        // Before processing, it checks to make sure the changed subject is the subject held.
         if changedSubject === self.numberSubject {
             print("Digit    : \(self.numberSubject.getValue())")
         }

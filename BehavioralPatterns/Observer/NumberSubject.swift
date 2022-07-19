@@ -21,6 +21,7 @@ public class NumberSubject: Subject {
 
     public func setValue(value: Int) {
         // ˅
+        // Notify observers when the value is set.
         self.value = value
         notifyObservers()
         // ˄
