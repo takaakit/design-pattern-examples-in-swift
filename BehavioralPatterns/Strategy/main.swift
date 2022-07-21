@@ -12,6 +12,8 @@ let player2 = Player(name: "James", strategy: MirrorStrategy())
 for _ in 0..<100 {
     let handOfPlayer1 = player1.showHandSignal()
     let handOfPlayer2 = player2.showHandSignal()
+
+    // Judge win, loss, or draw
     var resultOfPlayer1: GameResultType
     var resultOfPlayer2: GameResultType
     if handOfPlayer1.isStrongerThan(hand: handOfPlayer2) {
@@ -29,6 +31,7 @@ for _ in 0..<100 {
         resultOfPlayer1 = GameResultType.draw
         resultOfPlayer2 = GameResultType.draw
     }
+
     player1.notifyGameResult(result: resultOfPlayer1, ownHand: handOfPlayer1, opponentsHand: handOfPlayer2)
     player2.notifyGameResult(result: resultOfPlayer2, ownHand: handOfPlayer2, opponentsHand: handOfPlayer1)
 }
