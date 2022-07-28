@@ -27,7 +27,12 @@ public class ProxyPrinter: Printer {
 
     public func getName() -> String {
         // ˅
-        return self.currentName
+        if real != nil {
+            return real!.getName()
+        }
+        else {
+            return self.currentName
+        }
         // ˄
     }
 
