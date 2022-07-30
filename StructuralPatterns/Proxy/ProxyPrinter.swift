@@ -2,6 +2,7 @@
 
 // ˄
 
+// ProxyPrinter forwards requests to RealPrinter when appropriate.
 public class ProxyPrinter: Printer {
     // ˅
     
@@ -41,15 +42,18 @@ public class ProxyPrinter: Printer {
         if real != nil {
             real!.changeName(name: name)
         }
+        
         self.currentName = name
         // ˄
     }
 
     public func output(content: String) {
         // ˅
+        // Check to see if the the RealPrinter had been created, create it if necessary.
         if real == nil {
             real = RealPrinter(name: currentName)
         }
+        
         real!.output(content: content)
         // ˄
     }
