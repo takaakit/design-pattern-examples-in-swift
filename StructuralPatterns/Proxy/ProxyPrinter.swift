@@ -49,7 +49,7 @@ public class ProxyPrinter: Printer {
 
     public func output(content: String) {
         // ˅
-        // Check to see if the the RealPrinter had been created, create it if necessary.
+        // Check to see if the RealPrinter had been created, create it if necessary.
         if real == nil {
             real = RealPrinter(name: currentName)
         }
