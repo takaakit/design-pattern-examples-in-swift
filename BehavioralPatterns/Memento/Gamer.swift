@@ -46,6 +46,8 @@ public class Gamer {
         let dice: Int = Int(arc4random()) % 6 + 1    // Shake a dice
         #endif
 
+        print("The number of dice is \(dice).")
+
         let preMoney: Int = money
         switch dice {
         case 1, 3, 5:
