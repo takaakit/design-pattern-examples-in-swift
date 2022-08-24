@@ -25,7 +25,7 @@ public class UnderlineDisplay: Display {
     public func show(message: String) {
         // ˅
         print("\"\(message)\"")
-        print(" \(String(repeating: underlineChar, count: message.count))")
+        print(" \(String(repeating: String(underlineChar), count: message.count))")
         // ˄
     }
 
