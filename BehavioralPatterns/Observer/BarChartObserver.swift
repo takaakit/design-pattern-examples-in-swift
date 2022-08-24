@@ -20,11 +20,7 @@ public class BarChartObserver: Observer {
         // ˅
         // Before processing, it checks to make sure the changed subject is the subject held.
         if changedSubject === self.numberSubject {
-            print("Bar chart: ", terminator: "")
-            for _ in 0..<self.numberSubject.getValue() {
-                print("*", terminator: "")
-            }
-            print()
+            print("Bar chart: \(String(repeating: "*", count: self.numberSubject.getValue()))")
         }
         // ˄
     }

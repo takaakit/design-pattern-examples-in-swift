@@ -60,7 +60,7 @@ public class Player {
 
     public func toString() -> String {
         // ˅
-        return name + " [" + String(gameCount) + " games, " + String(winCount) + " won, " + String(lossCount) + " lost, " + String(gameCount - winCount - lossCount) + " drew]"
+        return "\(name) [\(String(gameCount)) games, \(String(winCount)) won, \(String(lossCount)) lost, \(String(gameCount - winCount - lossCount)) drew]"
         // ˄
     }
 

@@ -38,7 +38,7 @@ public class HistoryCommand: Command {
     // Delete the last command
     public func undo() {
         // ˅
-        if pastCommands.count > 0 {
+        if pastCommands.count >= 1 {
             pastCommands.removeLast()
         }
         // ˄

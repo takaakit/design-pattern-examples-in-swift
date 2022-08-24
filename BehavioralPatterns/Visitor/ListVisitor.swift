@@ -31,7 +31,7 @@ public class ListVisitor: Visitor {
         // ˅
         print("\(currentDirectory)/\(directory.toString())")
         let visitedDirectory: String = currentDirectory
-        currentDirectory = currentDirectory + "/" + directory.getName()
+        currentDirectory = "\(currentDirectory)/\(directory.getName())"
         for element in directory.getElements() {
             element.accept(visitor: self)
         }

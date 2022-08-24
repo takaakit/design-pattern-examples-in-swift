@@ -46,20 +46,20 @@ public class AppSafe: NSView, Context {
 
     public func changeState(state: State) {
         // ˅
-        print("The state changed from " + self.state.toString() + " to " + state.toString() + ".")
+        print("The state changed from \(self.state.toString()) to \(state.toString()).")
         self.state = state
         // ˄
     }
 
     public func callSecurityGuardsRoom(msg: String) {
         // ˅
-        textMessage.insertText("call! " + msg + "\n", replacementRange: NSMakeRange(-1, 0))
+        textMessage.insertText("call! \(msg)\n", replacementRange: NSMakeRange(-1, 0))
         // ˄
     }
 
     public func recordSecurityLog(msg: String) {
         // ˅
-        textMessage.insertText("record ... " + msg + "\n", replacementRange: NSMakeRange(-1, 0))
+        textMessage.insertText("record ... \(msg)\n", replacementRange: NSMakeRange(-1, 0))
         // ˄
     }
 
@@ -85,10 +85,10 @@ public class AppSafe: NSView, Context {
         // ˅
         var clockString: String = "Current Time : "
         if hour < 10 {
-            clockString += "0" + String(currentTime) + ":00"
+            clockString += "0\(String(currentTime)):00"
         }
         else {
-            clockString += String(currentTime) + ":00"
+            clockString += "\(String(currentTime)):00"
         }
         print(clockString)
         textTime.stringValue = clockString

@@ -24,13 +24,8 @@ public class UnderlineDisplay: Display {
 
     public func show(message: String) {
         // ˅
-        let length = message.count
         print("\"\(message)\"")
-        print(" ", terminator: "")
-        for _ in 0..<length {
-            print(underlineChar, terminator: "")
-        }
-        print()
+        print(" \(String(repeating: underlineChar, count: message.count))")
         // ˄
     }
 

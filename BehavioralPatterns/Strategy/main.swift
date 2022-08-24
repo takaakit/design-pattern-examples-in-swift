@@ -17,12 +17,12 @@ for _ in 0..<100 {
     var resultOfPlayer1: GameResultType
     var resultOfPlayer2: GameResultType
     if handOfPlayer1.isStrongerThan(hand: handOfPlayer2) {
-        print("Winner: " + player1.toString())
+        print("Winner: \(player1.toString())")
         resultOfPlayer1 = GameResultType.win
         resultOfPlayer2 = GameResultType.loss
     }
     else if handOfPlayer2.isStrongerThan(hand: handOfPlayer1) {
-        print("Winner: " + player2.toString())
+        print("Winner: \(player2.toString())")
         resultOfPlayer1 = GameResultType.loss
         resultOfPlayer2 = GameResultType.win
     }

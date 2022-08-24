@@ -28,7 +28,7 @@ public class FileSystemElement {
 
     public func toString() -> String {
         // ˅
-        return getName() + " (" + String(getSize()) + ")"
+        return "\(getName()) (\(String(getSize())))"
         // ˄
     }
 

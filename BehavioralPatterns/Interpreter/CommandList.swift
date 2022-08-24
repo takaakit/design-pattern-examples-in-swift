@@ -17,7 +17,7 @@ public class CommandList: Node {
         while true {
             if context.getToken() == "" {
                 print("Missing 'end'")
-                return
+                exit(1)
             }
             else if context.getToken() == "end" {
                 context.slideToken(token: "end")

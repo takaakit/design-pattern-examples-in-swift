@@ -46,7 +46,7 @@ public class Context {
         // ˅
         if token != getToken() {
             print("WARNING: \(token) is expected but \(getToken()) was found.")
-            return
+            exit(1)
         }
         nextToken()
         // ˄

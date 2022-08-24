@@ -40,11 +40,9 @@ public class TextDisplayImpl: DisplayImpl {
 
     private func printLine() {
         // ˅
-        print("*", terminator: "")      // Display "*" mark at the beginning of a frame.
-        for _ in 0..<width {
-            print(".", terminator: "")  // Display "." for the number of "width".
-        }
-        print("*")                      // Display "*" mark at the end of a frame.
+        print("*", terminator: "")                                  // Display "*" mark at the beginning of a frame.
+        print(String(repeating: ".", count: width), terminator: "") // Display "." for the number of "width".
+        print("*")                                                  // Display "*" mark at the end of a frame.
         // ˄
     }
 

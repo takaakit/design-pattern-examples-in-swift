@@ -27,7 +27,7 @@ public class StringDisplay: AbstractDisplay {
 
     public override func write() {
         // ˅
-        print("|" + strText + "|")   // Display the character with "|"
+        print("|\(strText)|")   // Display the character with "|"
         // ˄
     }
 
@@ -39,11 +39,9 @@ public class StringDisplay: AbstractDisplay {
 
     private func writeLine() {
         // ˅
-        print("+", terminator: "")          // Display an end mark "+"
-        for _ in 0..<width {
-            print("-", terminator: "")      // Display a line "-"
-        }
-        print("+")                          // Display an end mark "+"
+        print("+", terminator: "")                                  // Display an end mark "+"
+        print(String(repeating: "-", count: width), terminator: "") // Display a line "-"
+        print("+")                                                  // Display an end mark "+"
         // ˄
     }
 

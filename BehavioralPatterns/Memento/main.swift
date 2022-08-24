@@ -18,7 +18,7 @@ for i in 1...10 {
 
     // Determine the behavior of the Memento
     if gamer.money > memento.money {
-        print("(Gamers' money is the highest ever, so record the current state.)")
+        print("(Gamer's money is the highest ever, so record the current state.)")
         memento = gamer.createMemento()
     }
     else if gamer.money < memento.money / 2 {

@@ -20,7 +20,7 @@ else if inputValue == "html" {
     let director: Director = Director(builder: htmlBuilder)
     director.build()
     let fileName = htmlBuilder.getFileName()
-    print(fileName + " has been created.")
+    print("\(fileName) has been created.")
     let fm = FileManager.default
     print("Output File: \(fm.currentDirectoryPath)/\(fileName)")
 }

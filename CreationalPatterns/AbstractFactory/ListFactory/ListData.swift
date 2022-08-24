@@ -15,7 +15,7 @@ public class ListData: Data {
 
     public override func toHTML() -> String {
         // ˅
-        var buffer = ""
+        var buffer: String = ""
         buffer.append("<li>\(name)<ul>\n")
         for item in items {
             buffer.append(item.toHTML())

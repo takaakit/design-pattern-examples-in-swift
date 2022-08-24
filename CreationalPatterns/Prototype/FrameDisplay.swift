@@ -24,16 +24,9 @@ public class FrameDisplay: Display {
 
     public func show(message: String) {
         // ˅
-        let length = message.count
-        for _ in 0..<length+4 {
-            print(borderChar, terminator: "")
-        }
-        print()
+        print(String(repeating: borderChar, count: message.count + 4))
         print("\(String(borderChar)) \(message) \(String(borderChar))")
-        for _ in 0..<length+4 {
-            print(borderChar, terminator: "")
-        }
-        print()
+        print(String(repeating: borderChar, count: message.count + 4))
         // ˄
     }
 

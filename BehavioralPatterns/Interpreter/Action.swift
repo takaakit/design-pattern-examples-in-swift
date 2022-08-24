@@ -18,7 +18,7 @@ public class Action: Node {
         let currentToken = context.getToken()
         if currentToken != "forward" && currentToken != "right" && currentToken != "left" {
             print("\(currentToken) is unknown")
-            return
+            exit(1)
         }
 
         self.name = currentToken    // Hold the current token as this action name
