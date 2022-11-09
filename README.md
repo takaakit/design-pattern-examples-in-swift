@@ -78,7 +78,7 @@ Installation on macOS
 
 **Xcode**
 * Download and install [Xcode](https://developer.apple.com/xcode/).  
-  The operation has been confirmed in **Swift 4.1.2** and **Xcode 9.4.1**.
+  The operation has been confirmed in **Swift 5.7.1** and **Xcode 14.1**.
 
 Usage on macOS
 -----
